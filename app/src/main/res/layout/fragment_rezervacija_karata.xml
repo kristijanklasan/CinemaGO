@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pozadina"
+    android:id="@+id/frameRezervacija"
+    tools:context=".fragmenti.RezervacijaKarata">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarKarte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pozadina"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title=" ">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/textNaslov"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Rezervacija karte"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:text="Odaberite datum:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/imageDatumKarta"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:clickable="true"
+                    android:contextClickable="false"
+                    android:scaleType="fitCenter"
+                    android:screenReaderFocusable="false"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/textDatumKarta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0.8"
+                    android:text="- odabrani datum"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Odaberite film: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerFilm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:foregroundTint="#FFFFFF"
+                    android:soundEffectsEnabled="true"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textDirection="firstStrongRtl" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewVrijeme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Odaberite vrijeme:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerVrijeme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:foregroundTint="#FFFFFF"
+                    android:soundEffectsEnabled="true"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textDirection="firstStrongRtl" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:text="Odaberite sjedala:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnOdabir_sjedala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/corner_button_blue"
+                    android:backgroundTint="#C3F44336"
+                    android:drawableLeft="@drawable/ic_event_seat_black_24dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Odaberi sjedala"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textUlaznica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Cijena ulaznica: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxDjeca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:buttonTint="#4D288E"
+                        android:text="Djeca"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxOdrasli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:buttonTint="#4D288E"
+                        android:text="Odrasli"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxStudenti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:buttonTint="#4D288E"
+                        android:text="Studenti"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.5"
+                android:text="* Cijene karata se odnose na populaciju: djeca do 10 god, odrasli > 10  godina"
+                android:textColor="#AFAFA9"
+                android:textSize="9sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:autoSizeTextType="uniform"
+                        android:text="Pregled podataka terminai: "
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomFilm"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Naslov filma: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separator"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textFilm"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomDatum"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Datum:"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorDatum"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textDatum"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomVrijeme"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Vrijeme prikazivanja:"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorVrijeme"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textVrijeme"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomDvorana"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Dvorana: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorDvorana"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textDvorana"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomMaxUlaznica"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Maks. ulaznica:"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorMaxUlaznica"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:autoSizeTextType="uniform"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textMaxUlaznica"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomTrenutnoUlaznica"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Preostalo ulaznica: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorTrenutno"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:autoSizeTextType="uniform"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textTrenutnoUlaznica"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewKorisnik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:autoSizeTextType="uniform"
+                        android:text="Pregled podataka na karti: "
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomKorisnik"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Korisnik: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorKorisnik"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textIme"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textPrezime"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomCijena"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Cijena ulaznice: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorCijena"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textCijena"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpom"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Red: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorRed"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textRed"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textpomSjedalo"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Sjedalo: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view_separatorSjedalo"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+                        <TextView
+                            android:id="@+id/textSjedalo"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textpomUkupno"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="Ukupno: "
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:id="@+id/view_separatorUkupno"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="#cfcfcf" />
+
+
+                        <TextView
+                            android:id="@+id/textUkupno"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:text="0 kn"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.5"
+                        android:background="#434242" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="Prihvaćam sve uvjete o kupnji karata: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxUvjeti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:backgroundTint="#EA0909"
+                    android:buttonTint="#016C05" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRezervacija"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/corner_button_blue"
+                android:backgroundTint="#A11444"
+                android:drawableLeft="@drawable/ic_add_box_black_24dp"
+                android:gravity="center"
+                android:paddingStart="80dp"
+                android:paddingEnd="80dp"
+                android:text="Rezerviraj kartu"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

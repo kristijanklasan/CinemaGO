@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Film">
+            <menu>
+                <group
+                    android:id="@+id/menu_top"
+                    android:checkableBehavior="single">
+
+                    <item android:id="@+id/pregledFilmova"
+                        android:icon="@drawable/ic_local_movies_black_24dp"
+                        android:title="PREGLED FILMOVA"></item>
+
+                    <item android:id="@+id/rezervirajKartu"
+                        android:icon="@drawable/ic_playlist_add_check_black_24dp"
+                        android:title="REZERVIRAJ KARTU">
+                    </item>
+
+                    <item android:id="@+id/pregledRezervacija"
+                        android:icon="@drawable/ic_format_list_numbered_black_24dp"
+                        android:title="PREGLED REZERVACIJA">
+                    </item>
+
+                    <item android:id="@+id/korisnickiRacun"
+                        android:icon="@drawable/ic_account_box_black_24dp"
+                        android:title="KORISNIČKI RAČUN"></item>
+
+                    <item android:id="@+id/cijeneUlaznica"
+                        android:icon="@drawable/ic_attach_money_black_24dp"
+                        android:title="CIJENE ULAZNICA"></item>
+
+                </group>
+            </menu>
+        </item>
+        <item
+            android:title="Općenito o kinu">
+            <menu>
+                <group
+                    android:id="@+id/menu_bottom"
+                    android:checkableBehavior="single">
+
+                    <item android:id="@+id/najcescaPitanja"
+                        android:icon="@drawable/ic_question_answer_black_24dp"
+                        android:title="NAJČEŠĆA PITANJA"></item>
+
+                    <item android:id="@+id/informacijeCinema"
+                        android:icon="@drawable/ic_visibility_black_24dp"
+                        android:title="INFORMACIJE CINEMAGO"></item>
+                </group>
+            </menu>
+        </item>
+
+        <item
+            android:title="Izlazak iz aplikacije">
+            <menu>
+                <group>
+                    <item android:id="@+id/odjava"
+                        android:icon="@drawable/ic_power_settings_new_black_24dp"
+                        android:title="ODJAVI SE">
+
+                </item>
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

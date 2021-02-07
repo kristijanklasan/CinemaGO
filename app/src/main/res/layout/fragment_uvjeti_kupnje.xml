@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameSjedalo"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/pozadina"
+    android:screenOrientation="landscape"
+    tools:context=".fragmenti.UvjetiKupnje">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarUvjetiKupnje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pozadina"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="Uvjeti kupovine karte"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <ExpandableListView
+            android:id="@+id/expandable_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/pozadina"
+            android:groupIndicator="@drawable/custom_expandable" />
+    </LinearLayout>
+
+</FrameLayout>

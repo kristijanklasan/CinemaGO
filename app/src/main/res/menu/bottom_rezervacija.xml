@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listIzbor1"
+        android:icon="@drawable/ic_playlist_add_check_black_24dp"
+        android:title="Sve rezervacije">
+    </item>
+
+    <item
+        android:id="@+id/listIzbor2"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="Moj izbor">
+    </item>
+</menu>

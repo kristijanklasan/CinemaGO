@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">CinemaGO</string>
+
+    <string name="navigation_drawer_open">Otvori drawer</string>
+    <string name="navigation_drawer_close">Zatvori drawer</string>
+    <string name="acttion_settings">Settings</string>
+    <string name="name_movie">Movie Title</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="plot">Plot Synopsis</string>
+    <string name="rating">User rating</string>
+    <string name="release">Release Date</string>
+    <string name="pref_sort_order_label">Sort order</string>
+    <string name="pref_sort_order_key">sortOrder</string>
+    <string name="pref_most_ppular">Most Popular</string>
+    <string name="pref_highest_rated">Highest rated</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+
+    <string name="grupa1">Grupa 1</string>
+    <string name="grupa2">Grupa 2</string>
+    <string name="grupa3">Grupa 3</string>
+    <string name="grupa4">Grupa 4</string>
+
+    <string-array name="grupa1">
+        <item>item1</item>
+        <item>item2</item>
+    </string-array>
+
+    <string-array name="grupa2">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+
+    <string-array name="grupa3">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+
+    <string-array name="grupa4">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+
+
+</resources>
