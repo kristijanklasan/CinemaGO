@@ -1,6 +1,6 @@
 # CinemaGO
 
-## Kolegij: Izrada informatičkih projekata
+### Kolegij: Izrada informatičkih projekata
 
 ### Vrsta: Mobilna aplikacija
 
