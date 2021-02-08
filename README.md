@@ -2,7 +2,7 @@
 
 ## Kolegij: Izrada informatičkih projekata
 
-## Vrsta: Mobilna aplikacija
+### Vrsta: Mobilna aplikacija
 
 **Opis: **Aplikacija je namijenjena pregledu i rezervaciji karti kako bi se smanjili redovi čekanja u kinu. Korisnik može poduzeti niz akcija poput: pregledavanja filmova, spremanja u 
 favorites (lista želja), te rezervaciju karata. Svaki film je popračen detaljnim opisom i trailerom kako bi se korisnici lakše odlučili za film koji najviše odgovara njihovim ukusima. 
